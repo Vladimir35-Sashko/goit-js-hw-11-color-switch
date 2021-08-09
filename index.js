@@ -31,10 +31,13 @@ const timer = {
       let i = randomIntegerFromInterval(min, max);
       refs.body.style.backgroundColor = colors[i];
     }, 1000);
+    refs.startBtn.disabled = true;
   },
+  
   stop() {
     clearInterval(this.switchColors);
     this.isActive = false;
+    refs.startBtn.disabled = false;
   },
 };
 
